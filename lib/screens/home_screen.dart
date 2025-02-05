@@ -441,15 +441,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const Spacer(),
-            IconButton(
-              icon: Icon(
-                Icons.notifications,
-                color: theme.appBarTheme.foregroundColor,
-              ),
-              onPressed: () {
-                // Notifications functionality will be implemented in future updates
-              },
-            ),
           ],
         ),
         actions: [
