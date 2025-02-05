@@ -3,6 +3,7 @@ import '../services/cart_service.dart';
 import '../services/order_service.dart';
 import '../models/cart_item.dart';
 import '../screens/orders_screen.dart';
+import '../screens/products_screen.dart';
 import 'package:logging/logging.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:provider/provider.dart';
@@ -166,7 +167,12 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                       const SizedBox(height: 32),
                       ElevatedButton.icon(
-                        onPressed: () => Navigator.pop(context),
+                        onPressed: () => Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProductsScreen(token: widget.token),
+                          ),
+                        ),
                         icon: const Icon(Icons.shopping_bag_outlined),
                         label: const Text('Continue Shopping'),
                         style: ElevatedButton.styleFrom(
