@@ -167,7 +167,7 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                       const SizedBox(height: 32),
                       ElevatedButton.icon(
-                        onPressed: () => Navigator.pushReplacement(
+                        onPressed: () => Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => ProductsScreen(userData: {'token': widget.token}),
