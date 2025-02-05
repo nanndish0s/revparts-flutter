@@ -170,7 +170,7 @@ class _CartScreenState extends State<CartScreen> {
                         onPressed: () => Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ProductsScreen(token: widget.token),
+                            builder: (context) => ProductsScreen(userData: {'token': widget.token}),
                           ),
                         ),
                         icon: const Icon(Icons.shopping_bag_outlined),
